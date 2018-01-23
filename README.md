@@ -10,7 +10,7 @@ This app requires the use a Firebase api key to access Firebase database feature
 
 * Once your new project is created, click the cog icon next to Project Overview to access your project settings.
 
-* Click the button that says "Add Firebase to your web app" and copy the information for the modal window that pops up.
+* Click the button that says "Add Firebase to your web app" and copy the information from the modal window that pops up.
 
 * Create a file called `api-keys.ts` in the `src/app/` directory and add the following code with your API key information in place of the 'xxx's:
 ```
