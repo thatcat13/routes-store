@@ -2,6 +2,27 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.6.5.
 
+## Firebase API key
+
+This app requires the use a Firebase api key to access Firebase database features. You can acquire one of your own to use when running this project by visiting the [Firebase Website](https://firebase.google.com) and signing up for an account before taking the following steps:
+
+* Add a new project (you'll have to name it).
+
+* Once your new project is created, click the cog icon next to Project Overview to access your project settings.
+
+* Click the button that says "Add Firebase to your web app" and copy the information for the modal window that pops up.
+
+* Create a file called `api-keys.ts` in the `src/app/` directory and add the following code with your API key information in place of the 'xxx's:
+```
+export var masterFirebaseConfig = {
+  apiKey: "xxxx",
+  authDomain: "xxxx.firebaseapp.com",
+  databaseUrl: "https://xxx.firebaseio.com",
+  storageBucket: "xxxx.appspot.com",
+  messageingSenderId: "xxxx"
+};
+```
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
