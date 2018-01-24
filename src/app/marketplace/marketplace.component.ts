@@ -14,15 +14,18 @@ import { FirebaseListObservable } from 'angularfire2/database';
 
 export class MarketplaceComponent implements OnInit {
 
-  albums: FirebaseListObservable<any[]>;
 
   constructor(private router: Router, private albumService: AlbumService) { }
+  //constructor so that when the component is made the service is available to use (with its connected methods)
+
+  albums: FirebaseListObservable<any[]>;
+  //if there are albums, this is the type it'll be, which is any type from firebase [objects have all sorts of types of data so the 'any' helps]
 
   ngOnInit() {
     this.albums = this.albumService.getAlbums();
   }
 
-  goToDetailPage(clickedAlbum: Album){
-    this.router.navigate(['albums', clickedAlbum.id]);
+  goToDetailPage(clickedAlbum){
+    this.router.navigate(['albums', clickedAlbum.$key]);
   }
 }

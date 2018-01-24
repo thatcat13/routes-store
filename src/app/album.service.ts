@@ -16,12 +16,13 @@ export class AlbumService {
     return this.albums;
   }
 
+  addAlbum(newAlbum: Album) {
+    this.albums.push(newAlbum);
+  }
+  //remember that this.albums is the database array or list of current albums and this will put another new album on this list
+
   //return a single album with the provided id
-  getAlbumById(albumId: number){
-    for (var i = 0; i < ALBUMS.length; i++) {
-      if (ALBUMS[i].id === albumId) {
-        return ALBUMS[i];
-      }
-    }
+  getAlbumById(albumId: string){
+    return this.database.object('albums/' + albumId);
   }
 }
